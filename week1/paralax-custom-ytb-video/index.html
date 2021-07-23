@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Parallax and custom styling of video</title>
     <style>
         .container-x{
             width: auto;
@@ -21,8 +21,9 @@
             width: 100%;
             padding: 10% 0;
             margin: 20% 0;
+            flex-wrap: wrap;
             justify-content: center;
-            background-image: url(./imgs/learning.jpg);
+            background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./imgs/learning.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -50,6 +51,7 @@
             border: 1px solid lightgray;
             position: relative;
             height: 300px;
+            margin:1%;
         }
         .iframe{
             width:100%;
@@ -72,8 +74,10 @@
     <div class="container-x">
         <div class="row-x">
             <div class="supreme-force" data="ihk_Xglr164"  imglink="./imgs/learnpython.jpeg" ></div>
-          
+            <div class="supreme-force" data="PkZNo7MFNFg"  imglink="./imgs/javascript.png" ></div>
+            <div class="supreme-force" data="UE2Nd4F6nuk"  imglink="./imgs/learnovate.jpeg" ></div>
         </div>
+        
     </div>
     <script>
       
