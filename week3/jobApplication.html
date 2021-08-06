@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Application </title>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="" method="POST" class="form-section" onsubmit="return validate();">
+            <h1>Join us</h1>
+            <span class="grp-2">
+                <span class="grp-1" style="width:50%">
+                    <label for="fname">First Name</label>
+                    <input style="padding:10px;" type="text" name="fname" id="fname" class="input-section" required>
+                </span>
+                <span class="grp-1" style="width:50%">
+                    <label for="lname">Last Name</label>
+                    <input style="padding:10px;" type="text" name="lname" id="lname" class="input-section" required>
+                </span>
+            </span>
+            <span class="grp-1">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="input-section icon email" required>
+            </span>
+            <span class="grp-1">
+                <label for="con">Contact</label>
+                <input type="number" name="contact" id="con" class="input-section icon telephone"  required>
+            </span>
+            <span class="grp-1">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" class="input-section icon password" required>
+                <input type="password" name="rpass" id="pass" class="input-section icon password" required>
+            </span>
+
+            <span class="grp-1">                
+                <label for="skills">Skills</label>                
+                <span class="grp-3">
+                    <span class="chk-sp-grp">
+                        <input type="checkbox" name="skills[]" id="java" value="Java" class="hidden" >
+                        <label for="java" class="chk-sp">Java</label>
+                    </span>
+                    <span class="chk-sp-grp">
+                        <input type="checkbox" name="skills[]" id="python" value="Python" class="hidden" >
+                        <label for="python" class="chk-sp">Python</label>
+                    </span>
+                    <span class="chk-sp-grp">
+                        <input type="checkbox" name="skills[]" id="php" value="PHP" class="hidden" >
+                        <label for="php"class="chk-sp">PHP</label>
+                    </span>
+                    <span class="chk-sp-grp">                        
+                        <input type="checkbox" name="skills[]" id="cpp" value="CPP" class="hidden" >
+                        <label for="cpp"class="chk-sp">C/C++</label>
+                    </span> 
+                    <span class="chk-sp-grp">
+                        <input type="checkbox" name="skills[]" id="js" value="Javascript" class="hidden">
+                        <label for="js"class="chk-sp">Javascript</label>
+                    </span>
+                </span>
+            </span>
+
+            <span class="grp-1">
+                <label for=""></label>
+                <span class="grp-3">
+                    <span class="rad-sp-grp">
+                        <input type="radio" name="gender" required id="m" value="male">
+                        <label for="m">Male</label>
+                    </span>
+                    <span class="rad-sp-grp">
+                        <input type="radio" name="gender" required id="fm" value="female">
+                        <label for="fm">Female</label>
+                    </span>
+                    <span class="rad-sp-grp">
+                        <input type="radio" name="gender" required id="n" value="other">
+                        <label for="n">Not to disclose</label>
+                    </span>
+                </span>
+            </span>
+
+            <span class="grp-1">
+                <label for="addr">Address</label>
+                <textarea name="address" id="addr" class="textarea input-section icon location" cols="30" rows="10" placeholder="Address" required></textarea>
+            </span>
+
+            <span class="grp-1">
+                <label for="file" class="file">
+                    <p id="p">Upload your file here</p>
+                    <input type="file" name="resume" id="file">
+                </label>
+            </span>
+            <input type="submit" value="Apply" class="submit-btn">
+        </form>
+    </div>
+    <script type="text/javascript">
+    
+        function validate(){            
+            var flag=true;
+            let error="";
+            try{
+                    
+                let contact=document.getElementById("con");
+                let fname=document.getElementById("fname");
+                let lname=document.getElementById("lname");
+                let password=document.getElementById("pass");
+                let file=document.getElementById("file");
+
+                let regexPassword=/^[A-Za-z0-9]+$/g;
+                let regexName=/^[A-Za-z]+$/g;
+
+                if(!password.value.match(regexPassword)){
+                    error+="Password can only contain letters and numbers \n";
+                    flag=false;
+                }
+                if(!fname.value.match(regexName) || !lname.value.match(regexName)){
+                    error+="Name cannot have any special character or numbers \n";
+                    flag=false;
+                }
+                if(contact.value.length!=10){
+                    error+="Contact number should be of length 10 \n";
+                    flag=false;
+                }
+                let okay=false;
+                let checkboxes=document.getElementsByName("skills[]");
+                for(let i=0;i<checkboxes.length;i++){
+                    if(checkboxes[i].checked){
+                        okay=true;
+                        break;
+                    }
+                }
+
+
+                if(!okay){
+                    error+="At least one skill set muct be selected \n";
+                    flag=false;
+                }
+
+                let name=file.files[0].name;
+                
+
+            }catch(e){
+                console.log(e);
+                error+="File not chosen";
+                flag=false;
+            }
+            if(!flag){
+                alert(error);
+            }
+            return flag;
+        }
+        let file=document.getElementById("file");
+        file.addEventListener("change", (e)=>{
+            let file=document.getElementById("file");
+            // console.log(file.parentElement);
+            let data="File : "+file.files[0].name;
+            document.getElementById("p").textContent=data;
+        });
+    </script>
+</body>
+</html>

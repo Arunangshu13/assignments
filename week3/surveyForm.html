@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form-section" style="width: 70%;" method="POST">
+            
+            <h2> Event Feedback Survey </h2>
+            <small>
+                First of all thank you very much for attending this event we are glad to have you as a participant of the event.
+                Since there is no such thing called "100% PERFECT"  it is our best effort to provide <b>the best quality</b>. And this is 
+                not possible without your valuable feedback. <br>
+                We do not ask any personal information of yours while taking feedback. You are free to give your honest response.
+            </small>
+            <br>
+            <div class="section">
+                <span class="grp-1">
+                    <h4>How satisfied were you with the event</h4>
+                    <input type="range"  name="satisfcation" id="sat">    
+                </span>
+            </div>
+            <div class="section">
+                <span class="grp-1">
+                    <h4>How was your overall experience</h4>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Very poor</td>
+                            <td><input type="radio" name="exp" value="1" id="1"></td>
+                            <td><input type="radio" name="exp" value="2" id="2"></td>
+                            <td><input type="radio" name="exp" value="3" id="3"></td>
+                            <td><input type="radio" name="exp" value="4" id="4"></td>
+                            <td><input type="radio" name="exp" value="5" id="5"></td>
+                            <td>Excellent</td>                            
+                        </tr>
+                    </table>
+                </span>
+            </div>
+            <div class="section">
+                <span class="grp-1">
+                    <h4>Where did you hear about this event?</h4>
+                    <select name="source" id="">
+                        <option value="" selected>-</option>
+                        <option value="social media">Social Media</option>
+                        <option value="friends">Friends</option>
+                        <option value="institute">Institute</option>
+                        <option value="other">Other</option>
+                    </select>
+                </span>
+            </div>
+            <div class="section">
+                <span class="grp-1">
+                    <h4>Which session did you find the most relevant ? </h4>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>Not Relevant</td>
+                            <td>Relevant</td>
+                            <td>Very Relevant</td>
+                            <td>Did not Attend</td>
+                        </tr>
+                        <tr>
+                            <td>Welcome activity</td>
+                            <td><input type="radio" name="welcomeRelevent" value="not revelent" id=""></td>
+                            <td><input type="radio" name="welcomeRelevent" value="relevent" id=""></td>
+                            <td><input type="radio" name="welcomeRelevent" value="very revelent" id=""></td>
+                            <td><input type="radio" name="welcomeRelevent" value="did not attend" id=""></td>                            
+                        </tr>
+                        <tr>
+                            <td>activity 1</td>
+                            <td><input type="radio" name="activity1" value="not revelent" id=""></td>
+                            <td><input type="radio" name="activity1" value="relevent" id=""></td>
+                            <td><input type="radio" name="activity1" value="very revelent" id=""></td>
+                            <td><input type="radio" name="activity1" value="did not attend" id=""></td>                            
+                        </tr>
+                        <tr>
+                            <td>activity 2</td>
+                            <td><input type="radio" name="activity2" value="not revelent" id=""></td>
+                            <td><input type="radio" name="activity2" value="relevent" id=""></td>
+                            <td><input type="radio" name="activity2" value="very revelent" id=""></td>
+                            <td><input type="radio" name="activity2" value="did not attend" id=""></td>                            
+                        </tr>
+                        <tr>
+                            <td>Cosing Event</td>
+                            <td><input type="radio" name="closingevent" value="not revelent" id=""></td>
+                            <td><input type="radio" name="closingevent" value="relevent" id=""></td>
+                            <td><input type="radio" name="closingevent" value="very revelent" id=""></td>
+                            <td><input type="radio" name="closingevent" value="did not attend" id=""></td>                            
+                        </tr>
+                    </table>
+                </span>
+            </div>
+            <div class="section">
+                <span class="grp-1">
+                    <h4>Any suggessitions ?</h4>
+                    <textarea name="comment" id="" class="textarea input-section" cols="30" rows="10"></textarea>
+                </span>
+            </div>
+            <input type="submit" value="Submit"  class="submit-btn">
+        
+        </form>
+    </div>
+</body>
+</html>

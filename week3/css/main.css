@@ -1,0 +1,152 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    padding: 100px 10px;
+    display: flex;
+}
+.form-section{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 2%;
+}
+.tetarea{
+    resize: none;
+}
+.grp-1{
+    display: flex;
+    margin:2% 0%;
+    flex-direction: column;
+}
+.input-section{
+    padding:10px 10px 10px 45px;
+    margin: 1% 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    width: auto;
+}
+
+.input-section:focus{
+    box-shadow: 0px 0px 2px 0px steelblue;
+}
+.grp-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.grp-3{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hidden{
+    display: none;
+}
+.chk-sp{
+    margin: auto;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    width: 65px;
+}
+.chk-sp:hover{
+    cursor:pointer;
+}
+.chk-sp-grp{
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+.hidden:checked ~ .chk-sp{
+    background-color: steelblue;
+    color: white;
+}
+.rad-sp-grp{
+    display: flex;
+    justify-content: center;
+    margin: 0 1%;
+}
+.rad-sp-grp label{
+    margin: auto;
+    cursor: pointer;
+}
+.rad-sp-grp input{
+    margin: auto 10px;
+    cursor: pointer;
+}
+.submit-btn{
+    padding: 10px;
+    align-self: flex-end;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-right: 5%;
+}
+.submit-btn:hover{
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+.file{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10% 0%;
+    position: relative;
+    width: 90%;
+    border: 3px dashed steelblue;
+    border-radius: 5px;
+    margin: auto;
+}
+.file:hover{
+    background-color: rgb(179, 195, 209);
+    cursor:pointer;
+}
+.file input{
+    position: absolute;
+    cursor:pointer;
+    width:100%;
+    top:0;
+    left:0;
+    height:100%;
+    opacity: 0;
+}
+.icon{
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    
+    font-size: 17px;
+}
+.telephone{
+    background-image: url(../imgs/telephone-fill.svg);
+}
+.location{
+    background-image: url(../imgs/geo-alt-fill.svg);
+}
+.password{
+    background-image: url(../imgs/key-fill.svg);
+}
+.email{
+    background-image: url(../imgs/envelope-fill.svg);
+}
+.textarea{
+    resize: none;
+}
+
+
+
+
+
+
+
+
+td{
+    text-align: center;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    
+}
