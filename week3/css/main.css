@@ -150,3 +150,8 @@ td{
     flex-direction: column;
     
 }
+.holder{
+    width: 90%;
+    overflow: auto;
+    margin: auto;
+}
