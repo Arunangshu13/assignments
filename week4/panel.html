@@ -51,8 +51,8 @@
         </div>
         
         <script>
-            
-            let classmate=document.cookie.split(";")[1].split("=")[1];
+            console.log(document.cookie)
+            let classmate=document.cookie.split("data=")[1];
             let jsondata=JSON.parse(classmate);
             let table=document.getElementById("tab");
             document.getElementById("name").textContent=jsondata.name;
